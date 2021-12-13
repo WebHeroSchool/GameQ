@@ -1,26 +1,31 @@
-let num;
+let num = 0;
 let score;
 
-const question_1 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+const quiz = [
+  {
+    question: 1, 
+    answer: true,
+    correctAnswer: "c"
+  },
 
-const question_2 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  {
+    question: 2, 
+    answer: false,
+    correctAnswer: "b"
+  },
 
-const question_3 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  {
+    question: 3, 
+    answer: false,
+    correctAnswer: "a"
+  },
 
-const question_4 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  {
+    question: 4, 
+    answer: true,
+    correctAnswer: "c"
+  }
+]
+
+const uncorrect = quiz.filter((q) => q.correctAnswer === "c");
+console.log(uncorrect);
