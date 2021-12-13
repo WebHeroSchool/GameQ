@@ -27,5 +27,5 @@ const quiz = [
   }
 ]
 
-const uncorrect = quiz.filter((q) => q.correctAnswer === "c");
-console.log(uncorrect);
+const correct = quiz.filter((q) => q.correctAnswer === "c");
+console.log(correct);
