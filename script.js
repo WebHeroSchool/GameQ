@@ -5,9 +5,8 @@ const quiz = [
   
   question1 = {
     question: "Как зовут моего кота?", 
-    answer: "c",
     correctAnswer: "c",
-    varsOfAnswers: {
+    answer: {
       a: "Борис",
       b: "Василий",
       c: "Леонид",
@@ -17,9 +16,8 @@ const quiz = [
 
   question2 = {
     question: "Столица Непала?", 
-    answer: "b",
     correctAnswer: "d",
-    varsOfAnswers: {
+    answer: {
       a: "Тибет",
       b: "Эверест",
       c: "Горы",
@@ -29,9 +27,8 @@ const quiz = [
 
   question3 = {
     question: "Где живет дед Мороз?", 
-    answer: "c",
     correctAnswer: "c",
-    varsOfAnswers: {
+    answer: {
       a: "Ямайка",
       b: "Томск",
       c: "Северный полюс",
@@ -41,9 +38,8 @@ const quiz = [
 
   question4 = {
     question: "Эта игра интересная?", 
-    answer: "b",
     correctAnswer: "a",
-    varsOfAnswers: {
+    answer: {
       a: "возможно",
       b: "нет",
       c: "да",
@@ -54,3 +50,4 @@ const quiz = [
 
 const correct = quiz.filter((q) => q.correctAnswer === "c");
 console.log(correct);
+
