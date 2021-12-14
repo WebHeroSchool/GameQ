@@ -2,9 +2,9 @@ let num = 0;
 let score;
 
 const quiz = [
-  
+
   question1 = {
-    question: "Как зовут моего кота?", 
+    question: "Как зовут моего кота?",
     correctAnswer: "c",
     answer: {
       a: "Борис",
@@ -15,7 +15,7 @@ const quiz = [
   },
 
   question2 = {
-    question: "Столица Непала?", 
+    question: "Столица Непала?",
     correctAnswer: "d",
     answer: {
       a: "Тибет",
@@ -26,7 +26,7 @@ const quiz = [
   },
 
   question3 = {
-    question: "Где живет дед Мороз?", 
+    question: "Где живет дед Мороз?",
     correctAnswer: "c",
     answer: {
       a: "Ямайка",
@@ -37,7 +37,7 @@ const quiz = [
   },
 
   question4 = {
-    question: "Эта игра интересная?", 
+    question: "Эта игра интересная?",
     correctAnswer: "a",
     answer: {
       a: "возможно",
@@ -48,25 +48,29 @@ const quiz = [
   }
 ]
 
-// const correct = quiz.filter((q) => q.correctAnswer === "c");
-// console.log(correct);
+console.log('Только правильные ответы - С!');
 
-const getAnswer = () => { 
+const correct = (quiz.filter((q) => q.correctAnswer === "c")).forEach((item) => {
+  console.log(`Правильный ответ на вопрос "${item.question}" - ${item['answer'].c}`)
+});
 
-  quiz.forEach((q) => {
-    let answer = prompt(q.question + ` 
-    Варианты ответа: 
-    a: ` + q.answer.a + `
-    b: ` + q.answer.b + `
-    c: ` + q.answer.c + `
-    d: ` + q.answer.d);
-    if (answer === q.correctAnswer || answer === q.correctAnswer) {
-      alert(`Верно! Правильный ответ!`);
-      console.log(`Верно! Правильный ответ на вопрос "${q.question}" - ${answer}`);
-    } else {
-      alert(`Это не правильный ответ!`);
-      console.log(`${answer} - Это не правильный ответ!`);
-    }
-  })
-}
-getAnswer();
+
+// const getAnswer = () => {
+
+//   quiz.forEach((q) => {
+//     let answer = prompt(q.question + `
+//     Варианты ответа:
+//     a: ` + q.answer.a + `
+//     b: ` + q.answer.b + `
+//     c: ` + q.answer.c + `
+//     d: ` + q.answer.d);
+//     if (answer === q.correctAnswer) {
+//       alert(`Верно! Правильный ответ!`);
+//       console.log(`Верно! Правильный ответ на вопрос "${q.question}" - ${answer}`);
+//     } else {
+//       alert(`Это не правильный ответ!`);
+//       console.log(`${answer} - Это не правильный ответ!`);
+//     }
+//   })
+// }
+// getAnswer();
