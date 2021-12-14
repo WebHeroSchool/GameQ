@@ -1,26 +1,55 @@
-let num;
+let num = 0;
 let score;
 
-const question_1 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+const quiz = [
 
-const question_2 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  question1 = {
+    question: "Как зовут моего кота?",
+    correctAnswer: "c",
+    answer: {
+      a: "Борис",
+      b: "Василий",
+      c: "Леонид",
+      d: "Иннокентий"
+    }
+  },
 
-const question_3 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  question2 = {
+    question: "Столица Непала?",
+    correctAnswer: "d",
+    answer: {
+      a: "Тибет",
+      b: "Эверест",
+      c: "Горы",
+      d: "Катманду"
+    }
+  },
 
-const question_4 = {
-  question: "", 
-  answer: "",
-  correctAnswer: ""
-}
+  question3 = {
+    question: "Где живет дед Мороз?",
+    correctAnswer: "c",
+    answer: {
+      a: "Ямайка",
+      b: "Томск",
+      c: "Северный полюс",
+      d: "не знаю"
+    }
+  },
+
+  question4 = {
+    question: "Эта игра интересная?",
+    correctAnswer: "a",
+    answer: {
+      a: "возможно",
+      b: "нет",
+      c: "да",
+      d: "не знаю"
+    }
+  }
+]
+
+console.log('Только правильные ответы - С!');
+
+const correct = (quiz.filter((q) => q.correctAnswer === "c")).forEach((item) => {
+  console.log(`Правильный ответ на вопрос "${item.question}" - ${item['answer'].c}`)
+});
