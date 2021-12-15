@@ -71,3 +71,23 @@ function getCount() {
   correctScore.style.color = 'tomato';
   countCorrectAnswers.appendChild(correctScore);
 }
+
+
+// const question = document.querySelector('#question');
+// const counter = document.querySelector('#counter');
+
+// const arrayOfQuestions = ['question1', 'question2', 'question3', 'question4'];
+// let num = 0;
+
+// function buildQuiz(arrayOfQuestions) {
+//   arrayOfQuestions.map((item) => {
+//     question.innerHTML = `${item.question}`
+//   });
+//   question.style.color = '#fd5c56';
+// }
+// buildQuiz(arrayOfQuestions);
+
+// console.log('Только правильные ответы - С!');
+// const correct = (arrayOfQuestions.filter((q) => q.correctAnswer === "c")).forEach((item) => {
+  // console.log(`Правильный ответ на вопрос "${item.question}" - ${item['answer'].c}`)
+// });
