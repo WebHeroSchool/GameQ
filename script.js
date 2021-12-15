@@ -68,6 +68,6 @@ function getCount() {
   let correctScore = document.createElement('span');
   correctScore.innerHTML = score;
   correctScore.style.paddingLeft = '10px';
-  correctScore.style.color = 'tomatox';
+  correctScore.style.color = 'tomato';
   countCorrectAnswers.appendChild(correctScore);
 }
