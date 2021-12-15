@@ -1,8 +1,7 @@
-let num = 0;
-let score;
+const countCorrectAnswers = document.querySelector('#score');
+let score = 0;
 
-const quiz = [
-
+const arrayOfQuestions = [
   question1 = {
     question: "Как зовут моего кота?",
     correctAnswer: "c",
@@ -13,7 +12,6 @@ const quiz = [
       d: "Иннокентий"
     }
   },
-
   question2 = {
     question: "Столица Непала?",
     correctAnswer: "d",
@@ -24,7 +22,6 @@ const quiz = [
       d: "Катманду"
     }
   },
-
   question3 = {
     question: "Где живет дед Мороз?",
     correctAnswer: "c",
@@ -35,7 +32,6 @@ const quiz = [
       d: "не знаю"
     }
   },
-
   question4 = {
     question: "Эта игра интересная?",
     correctAnswer: "a",
@@ -48,29 +44,30 @@ const quiz = [
   }
 ]
 
-console.log('Только правильные ответы - С!');
+const buildQuiz = () => {
+  arrayOfQuestions.forEach((q) => {
+    let answer = prompt(q.question + `
+    Варианты ответа:
+    a: ` + q.answer.a + `
+    b: ` + q.answer.b + `
+    c: ` + q.answer.c + `
+    d: ` + q.answer.d);
+    if (answer.toLowerCase() === q.correctAnswer) {
+      console.log(`Верно! Правильный ответ на вопрос "${q.question}" - ${answer}`);
+      score++;
+    } else {
+      console.log(`${answer} - это не правильный ответ!`);
+    }
+  })
+  // countCorrectAnswers.innerHTML = `Правильных ответов: ${score}`;
+  getCount();
+}
+buildQuiz();
 
-const correct = (quiz.filter((q) => q.correctAnswer === "c")).forEach((item) => {
-  console.log(`Правильный ответ на вопрос "${item.question}" - ${item['answer'].c}`)
-});
-
-
-// const getAnswer = () => {
-
-//   quiz.forEach((q) => {
-//     let answer = prompt(q.question + `
-//     Варианты ответа:
-//     a: ` + q.answer.a + `
-//     b: ` + q.answer.b + `
-//     c: ` + q.answer.c + `
-//     d: ` + q.answer.d);
-//     if (answer === q.correctAnswer) {
-//       alert(`Верно! Правильный ответ!`);
-//       console.log(`Верно! Правильный ответ на вопрос "${q.question}" - ${answer}`);
-//     } else {
-//       alert(`Это не правильный ответ!`);
-//       console.log(`${answer} - Это не правильный ответ!`);
-//     }
-//   })
-// }
-// getAnswer();
+function getCount() {
+  let correctScore = document.createElement('span');
+  correctScore.innerHTML = score;
+  correctScore.style.paddingLeft = '10px';
+  correctScore.style.color = 'tomatox';
+  countCorrectAnswers.appendChild(correctScore);
+}
